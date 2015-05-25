@@ -1,0 +1,56 @@
+{
+    "package": {
+        "name":         "hipanel-theme-adminlte1",
+        "title":        "Old AdminLte v1 Theme for HiPanel",
+        "type":         "yii2-extension",
+        "features":     "yii2, extension, theme",
+        "license":      "BSD-3-Clause",
+        "forum":        "https://forum.hiqdev.com/hipanel",
+        "language":     "PHP",
+        "keywords":     "adminlte, theme, hipanel, plugin",
+        "year":         2014
+    },
+    "vendor": {
+        "name":     "hiqdev",
+        "title":    "HiQDev",
+        "homepage": "https://hiqdev.com/",
+        "email":    "support@hiqdev.com",
+        "authors": {
+            "Andrii Vasyliev": {
+                "role":     "Project lead",
+                "email":    "sol@hiqdev.com",
+                "homepage": "https://hipanel.com/"
+            },
+            "Dmitry Naumenko": {
+                "role":     "Lead backend developer",
+                "email":    "silverfire@hiqdev.com",
+                "homepage": "http://silverfire.me/"
+            },
+            "Andrey Klochok": {
+                "role":     "Lead frontend developer",
+                "email":    "tafid@hiqdev.com",
+                "homepage": "https://hiqdev.com/"
+            },
+            "Yuriy Myronchuk": {
+                "role":     "QA Lead",
+                "email":    "bladeroot@hiqdev.com",
+                "homepage": "https://hiqdev.com/"
+            }
+        }
+    },
+    "deps": "all",
+    "all": {
+        "deps": "git, composer, LICENSE, README.md, CHANGELOG.md"
+    },
+    "composer.json": {
+        "require": {
+            "hiqdev/yii2-asset-adminlte1":              "~1.0",
+            "hiqdev/yii2-asset-select2-bootstrap3-css": "~1.5"
+        },
+        "autoload": {
+            "psr-4": {
+                "hipanel\\themes\\adminlte1\\": ""
+            }
+        }
+    }
+}
