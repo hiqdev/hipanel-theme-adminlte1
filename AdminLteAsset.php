@@ -11,11 +11,17 @@ use yii\web\AssetBundle;
 
 class AdminLteAsset extends AssetBundle
 {
+    /**
+     * @inheritdoc
+     */
     public $css = [
         '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css',
         '//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css',
     ];
 
+    /**
+     * @inheritdoc
+     */
     public $depends = [
         'yii\web\YiiAsset',
         'yii\bootstrap\BootstrapAsset',
