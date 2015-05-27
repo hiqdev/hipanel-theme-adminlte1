@@ -11,7 +11,6 @@ use yii\helpers\Url;
 ?>
 <title><?= Html::encode($this->title); ?></title>
 <?= Html::csrfMetaTags(); ?>
-<?php $this->head(); ?>
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -21,6 +20,7 @@ use yii\helpers\Url;
 <![endif]-->
 
 <?php
+$this->head();
 AdminLteAsset::register($this);
 
 $this->registerMetaTag(

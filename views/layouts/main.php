@@ -7,6 +7,7 @@
  * @var string $content Content
  */
 
+use Yii;
 use yii\helpers\Html;
 use yii\widgets\Breadcrumbs;
 use hipanel\widgets\Alert;
@@ -18,23 +19,14 @@ use hipanel\widgets\Alert;
 <head>
     <?= $this->render('//layouts/head') ?>
 </head>
-<body class="skin-blue">
+<body class="sidebar-mini <?= $this->bodyClasses ?>">
 <?php $this->beginBody(); ?>
 
-<!-- header logo: style can be found in header.less -->
-<header class="header">
-    <a href="<?= Yii::$app->homeUrl ?>" class="logo">
-        <!-- Add the class icon to your logo image or logo icon to add the margining -->
-        <?= Yii::$app->name ?>
-    </a>
-    <!-- Header Navbar: style can be found in header.less -->
-    <nav class="navbar navbar-static-top" role="navigation">
-        <!-- Sidebar toggle button-->
-        <a href="#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">
-            <span class="sr-only"><?= 'Toggle navigation' ?></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
+    <!-- header logo: style can be found in header.less -->
+    <header class="main-header">
+        <a href="<?= Yii::$app->homeUrl ?>" class="logo">
+            <span class="logo-mini"><b>Hi</b>P</span>
+            <span class="logo-lg"><b>Hi</b>Panel</span>
         </a>
 
         <div class="navbar-right">
@@ -116,18 +108,15 @@ use hipanel\widgets\Alert;
                     <small><?= $this->subtitle ?></small>
                 <?php endif; ?>
             </h1>
-            <?php
-            echo Breadcrumbs::widget([
-                'homeLink'     => [
+            <?= Breadcrumbs::widget([
+                'homeLink' => [
                     'label' => '<i class="fa fa-dashboard"></i> ' . Yii::t('app', 'Home'),
-                    'url'   => '/'
+                    'url' => '/'
                 ],
                 'encodeLabels' => false,
-                'tag'          => 'ol',
-                'links'        => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : []
-            ]);
-
-            ?>
+                'tag' => 'ol',
+                'links' => $this->breadcrumbs->getItemsArray(),
+            ]) ?>
         </section>
 
         <!-- Main content -->

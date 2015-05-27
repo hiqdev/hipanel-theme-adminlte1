@@ -44,6 +44,7 @@
     },
     "composer.json": {
         "require": {
+            "hiqdev/yii2-theme-adminlte":               "*@dev",
             "hiqdev/yii2-asset-adminlte1":              "~1.0",
             "hiqdev/yii2-asset-select2-bootstrap3-css": "~1.5"
         },
