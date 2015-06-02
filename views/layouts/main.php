@@ -19,16 +19,15 @@ use hipanel\widgets\Alert;
 <head>
     <?= $this->render('//layouts/head') ?>
 </head>
-<body class="sidebar-mini <?= $this->bodyClasses ?>">
+<body class="<?= $this->bodyClasses; ?>">
 <?php $this->beginBody(); ?>
 
-    <!-- header logo: style can be found in header.less -->
-    <header class="main-header">
-        <a href="<?= Yii::$app->homeUrl ?>" class="logo">
-            <span class="logo-mini"><b>Hi</b>P</span>
-            <span class="logo-lg"><b>Hi</b>Panel</span>
-        </a>
-
+<!-- header logo: style can be found in header.less -->
+<header class="header">
+    <a href="<?= Yii::$app->homeUrl ?>" class="logo">
+        <?= Yii::$app->name; ?>
+    </a>
+    <nav class="navbar navbar-static-top" role="navigation">
         <div class="navbar-right">
             <ul class="nav navbar-nav">
                 <!-- User Account: style can be found in dropdown.less -->
