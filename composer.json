@@ -15,7 +15,7 @@
         "source": "https://github.com/hiqdev/hipanel-theme-adminlte1",
         "issues": "https://github.com/hiqdev/hipanel-theme-adminlte1/issues",
         "wiki": "https://github.com/hiqdev/hipanel-theme-adminlte1/wiki",
-        "forum": "https://forum.hiqdev.com/hipanel"
+        "forum": "https://forum.hiqdev.com/"
     },
     "authors": [
         {
@@ -45,12 +45,17 @@
     ],
     "require": {
         "hiqdev/yii2-theme-adminlte": "*@dev",
-        "hiqdev/yii2-asset-adminlte1": "~1.0",
         "hiqdev/yii2-asset-select2-bootstrap3-css": "~1.5"
     },
     "autoload": {
         "psr-4": {
             "hipanel\\themes\\adminlte1\\": ""
+        }
+    },
+    "extra": {
+        "asset-installer-paths": {
+            "npm-asset-library": "vendor/npm",
+            "bower-asset-library": "vendor/bower"
         }
     }
 }

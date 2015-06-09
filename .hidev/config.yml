@@ -1,0 +1,19 @@
+parent:
+    github:         hiqdev/hidev-config
+
+package:
+    name:           hipanel-theme-adminlte1
+    namespace:      hipanel\themes\adminlte1
+    title:          Old AdminLte v1 Theme for HiPanel
+    type:           yii2-extension
+    keywords:       adminlte, theme, hipanel, plugin
+    year:           2014
+
+composer.json:
+    require:
+        hiqdev/yii2-theme-adminlte:                 "*@dev"
+        hiqdev/yii2-asset-select2-bootstrap3-css:   "~1.5"
+    extra:
+        asset-installer-paths:
+            npm-asset-library:                      vendor/npm
+            bower-asset-library:                    vendor/bower
