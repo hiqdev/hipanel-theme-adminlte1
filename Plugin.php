@@ -12,7 +12,7 @@ class Plugin extends \hiqdev\pluginmanager\Plugin
     protected $_items = [
         'themes' => [
             'adminlte1' => [
-                'class' => 'hipanel\themes\adminlte1\Theme',
+                'class' => 'hipanel\themes\adminlte1\AdminLteTheme',
             ],
         ],
     ];
