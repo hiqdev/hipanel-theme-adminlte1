@@ -42,28 +42,7 @@ use hipanel\widgets\Alert;
                             <?= $this->render('//layouts/gravatar',['size'=>16]); ?>
                             <span><?= Yii::$app->user->identity->username ?> <i class="caret"></i></span>
                         </a>
-                        <ul class="dropdown-menu">
-                            <!-- User image -->
-                            <li class="user-header bg-light-blue">
-                                <?= $this->render('//layouts/gravatar',['size'=>90]); ?>
-                                <p>
-                                    <?= Yii::$app->user->identity->username ?> - <?= Yii::$app->user->identity->type ?>
-                                    <small><?= Yii::t('app', 'Member since') ?> <?= '2014-11-24' ?></small>
-                                </p>
-                            </li>
-                            <!-- Menu Footer-->
-                            <li class="user-footer">
-                                <div class="pull-left">
-                                    <?= Html::a('Profile', [
-                                        '/users/default/update',
-                                        'id' => Yii::$app->user->id
-                                    ], ['class' => 'btn btn-default btn-flat']) ?>
-                                </div>
-                                <div class="pull-right">
-                                    <?= Html::a('Sign out', ['/site/logout'], ['class' => 'btn btn-default btn-flat']) ?>
-                                </div>
-                            </li>
-                        </ul>
+                        <?= $this->render('//layouts/user-menu') ?>
                     <?php }; ?>
                 </li>
             </ul>
